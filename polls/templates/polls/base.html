@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dope or float</title>
+
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="js/polls.js"></script>
+    <style>
+        .superimage {
+    position: relative;
+    float: left;
+
+    height: 60vw;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+
+}
+        .logo {
+            width: 600px;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+
+        }
+    #outer{
+            width:100%;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+    }
+        .text{
+            text-align: center;
+            color: whitesmoke;
+            font-size: large;
+        }
+        body{
+         background-color: #383F51;
+        }
+    </style>
+</head>
+<body>
+
+<body>
+    <div class="container">
+    <div class="row">
+        <div id="outer">
+        <div class="col-md-12"><img src="{% static 'img/dopeorfloatlogo.jpg' %}" class="logo"/> </div>
+    </div>
+    </div>
+    <div class="text">
+        Click the better outfit to your heart's content
+    </div>
+        <div class="row">
+
+            {% block content %}
+                    {% endblock %}
+                </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{%  extends 'polls/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="col-lg-6" ><a href="{% url 'grabber_two' pkt=post.pk %}"> <img src="{{ post.imageLink }}" class="superimage"/>
+            </a></div>
+
+        </div>
+     {% endfor %}
+{% endblock %}
